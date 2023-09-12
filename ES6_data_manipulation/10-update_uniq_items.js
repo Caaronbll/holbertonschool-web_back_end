@@ -5,6 +5,7 @@ export default function updateUniqueItems(map) {
             map[key] = 100;
         }
     }
+    return map;
   } else {
     throw new Error('Cannot process');
   }
