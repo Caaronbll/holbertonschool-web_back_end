@@ -1,7 +1,5 @@
-getResponseFromAPI()
-  .then(data => {
-    console.log('API response:', data);
-  })
-  .catch(error => {
-    console.error('Error:', error);
-  });
+export default function getResponseFromAPI() {
+  return fetch('https://jsonplaceholder.typicode.com/todos/1')
+  .then(response => response.json())
+  .then(data => data);
+}
