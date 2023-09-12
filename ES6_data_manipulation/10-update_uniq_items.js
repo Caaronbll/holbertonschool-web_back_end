@@ -1,12 +1,11 @@
 export default function updateUniqueItems(map) {
-  if (typeof(map) == Map) {
-    for (map[key] in map) {
-        if (map[key] == 1) {
-            map[key] = 100;
-        }
-    }
-    return map;
-  } else {
+  if (typeof(map) !== Map) {
     throw new Error('Cannot process');
+  }
+  for (key in map) {
+    if (map[key] === 1) {
+      map.update(key === 100);
+    }
+  return map;
   }
 }
