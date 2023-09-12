@@ -3,8 +3,8 @@ export default function updateUniqueItems(map) {
     throw new Error('Cannot process');
   }
   for (const key in map) {
-    if (map[key] === 1) {
-      map.update(key === 100);
+    if (map.get(key) === 1) {
+      map.set(key) = 100;
     }
   return map;
   }
