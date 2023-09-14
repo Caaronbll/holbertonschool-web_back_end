@@ -12,6 +12,6 @@ export default async function handleProfileSignup(
             status.push({ status: 'fulfilled', value: data });
             await uploadPhoto(fileName);
         }).catch((err) => {
-            status.push({ status:'rejected', value: err.tostring() });
+            status.push({ status:'rejected', value: err.toString() });
         });
 }
